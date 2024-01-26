@@ -1,3 +1,3 @@
 # SAED04
 ## SOMMAIRE
-![Alt_text](CR/sre-metier.mr)
+- [x] [SRE metier](CR/sre-metier.md)
