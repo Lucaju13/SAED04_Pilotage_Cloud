@@ -220,8 +220,9 @@ sudo apt install kopia-ui
 ```cmd
 test@202-13:~$ kopia restore k2fad822dae1a9fffe33b6905b51b4956  
 ```
+
 ![Alt_text](../images/27.png)
-![Alt_text](../images/28.png)
+
 
 
 ## Partie V: Sauvegarde d’un cluster kubernetes
