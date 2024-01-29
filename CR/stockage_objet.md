@@ -168,3 +168,6 @@ root@debian:~# mc rb --insecure lucaju/testbucket --force
 ```
 ![Alt_text](../images/15.png)
 ![Alt_text](../images/16.png)
+
+## Python et minio
+
