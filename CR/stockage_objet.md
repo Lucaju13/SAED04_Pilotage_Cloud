@@ -143,7 +143,10 @@ root@debian:~# mkdir test_rep
 root@debian:~# cp minio.deb test_rep/
 root@debian:~# mc cp -r test_rep lucaju/testbucket --insecure
 /root/test_rep/minio.deb:          34.03 MiB / 34.03 MiB ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.56 MiB/s 0sroot@debian:~# 
-``
+```
+![Alt_text](../images/12.png)
+
+
 
 
 
