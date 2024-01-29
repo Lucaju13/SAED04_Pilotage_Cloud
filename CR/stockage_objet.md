@@ -185,3 +185,12 @@ pip freeze > requirements.txt
 - Execution du script, vous pouvez trouver [ici](../scripts/file_uploader.py)
 ![Alt_text](../images/18.png)
 ![Alt_text](../images/19.png)
+
+### Se connecter à MinIO avec le SDK AWS (boto)
+- Installez le paquet AWS SDK (boto) :
+```cmd
+pip install boto3
+pip freeze > requirements.txt
+```
+-  Execution du script, vous pouvez trouver [ici](../scripts/upload_boto3.py)
+![Alt_text](../images/21.png)
