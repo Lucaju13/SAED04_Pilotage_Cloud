@@ -171,3 +171,14 @@ root@debian:~# mc rb --insecure lucaju/testbucket --force
 
 ## Partie III - Python et minio
 [Tuto link](https://www.stackhero.io/fr-fr/services/MinIO/documentations/Pour-commencer/Se-connecter-a-MinIO-depuis-Python)
+### Se connecter à MinIO avec le SDK MinIO
+- Installez le paquet MinIO :
+```cmd
+apt install pip
+python3 -m venv /home/env
+source /home/env/bin/activate
+(env) root@debian:~# 
+pip install minio
+pip freeze > requirements.txt
+```
+![Alt_text](../images/17.png)
