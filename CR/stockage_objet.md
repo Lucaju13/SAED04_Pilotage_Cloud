@@ -98,4 +98,7 @@ minio-user@debian:~$ mv cert.pem ~/.minio/certs/public.crt
 ![Alt_text](../images/4.png)
 ![Alt_text](../images/6.png)
 
+#### Installation et utilisation du client minio "mc"
+
+
 
