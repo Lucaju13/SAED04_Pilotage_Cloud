@@ -40,5 +40,17 @@ GNU nano 7.2                                                                    
 MINIO_ACCESS_KEY=minio-user
 MINIO_SECRET_KEY=myadmin123minio
 MINIO_VOLUMES="/mnt/data"
-
 ```
+- Ajout de permissions:
+```cmd
+mkdir /mnt/disk1 /mnt/disk2 /mnt/disk3 /mnt/disk4
+chown minio-user:minio-user /mnt/disk1 /mnt/disk2 /mnt/disk3 /mnt/disk4
+
+groupadd -r minio-user
+useradd -M -r -g minio-user minio-user
+chown minio-user:minio-user /mnt/disk1 /mnt/disk2 /mnt/disk3 /mnt/disk4
+
+systemctl enable minio.service
+sudo systemctl restart  minio.service
+```
+
