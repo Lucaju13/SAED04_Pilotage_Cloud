@@ -1,1 +1,0 @@
-# Le Stockage Objet MinIO
