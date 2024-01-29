@@ -182,3 +182,6 @@ pip install minio
 pip freeze > requirements.txt
 ```
 ![Alt_text](../images/17.png)
+- Execution du script, vous pouvez trouver [ici](../scripts/file_uploader.py)
+![Alt_text](../images/18.png)
+![Alt_text](../images/19.png)
