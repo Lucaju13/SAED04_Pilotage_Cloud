@@ -55,3 +55,8 @@ sudo systemctl restart  minio.service
 ```
 - Fonctionnement:
 ![Alt_text](../images/1.png)
+
+![Alt_text](../images/2.png)
+
+#### Génération des Certificats
+
