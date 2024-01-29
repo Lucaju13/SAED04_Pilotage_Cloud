@@ -199,3 +199,19 @@ pip freeze > requirements.txt
 
 ## Partie IV - Utilisation de Minio comme "backend de sauvegarde"
 ### Sauvegarde minio avec Kopia
+**Procedures d'Installation Kopia**:
+```cmd
+curl -s https://kopia.io/signing-key | sudo gpg --dearmor -o /etc/apt/keyrings/kopia-keyring.gpg
+echo "deb [signed-by=/etc/apt/keyrings/kopia-keyring.gpg] http://packages.kopia.io/apt/ stable main" | sudo tee /etc/apt/sources.list.d/kopia.list
+sudo apt update
+sudo apt install kopia
+sudo apt install kopia-ui
+```
+**Lancement**:
+```cmd
+/usr/bin$ ./kopia-ui
+```
+![Alt_text](../images/22.png)
+![Alt_text](../images/23.png)
+![Alt_text](../images/24.png)
+![Alt_text](../images/25.png)
