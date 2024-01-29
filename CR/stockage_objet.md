@@ -35,5 +35,10 @@ Paramétrage de minio (20240129035632.0.0) ...
 - Créez le fichier de configuration :
 ```cmd
 nano /etc/default/minio
+
+GNU nano 7.2                                                                          /etc/default/minio                                                                                    
+MINIO_ACCESS_KEY=minio-user
+MINIO_SECRET_KEY=myadmin123minio
+MINIO_VOLUMES="/mnt/data"
+
 ```
-![Alt_text](../images/1.png)
