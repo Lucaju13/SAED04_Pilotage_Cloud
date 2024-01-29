@@ -124,7 +124,20 @@ root@debian:~# mc alias set lucaju https://debian:9000 minio-user myadmin123mini
 ![Alt_text](../images/7.png)
 ![Alt_text](../images/8.png)
 
+- Ping:
+```cmd
+root@debian:~# mc admin info lucaju --insecure
+```
+![Alt_text](../images/9.png)
 
+- Création d'un bucket "testbucket & list de tousles buckets sur mon serveur Minio.
+```cmd
+root@debian:~# mc ls lucaju --insecure
+```
+![Alt_text](../images/10.png)
+![Alt_text](../images/11.png)
+
+- Ajoute d'une directory et fichiers sur mon bucket.
 
 
 
