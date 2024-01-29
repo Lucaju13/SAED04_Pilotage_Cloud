@@ -211,7 +211,26 @@ sudo apt install kopia-ui
 ```cmd
 /usr/bin$ ./kopia-ui
 ```
-![Alt_text](../images/22.png)
 ![Alt_text](../images/23.png)
 ![Alt_text](../images/24.png)
 ![Alt_text](../images/25.png)
+
+- Restore:
+![Alt_text](../images/26.png)
+```cmd
+test@202-13:~$ kopia restore k2fad822dae1a9fffe33b6905b51b4956  
+```
+![Alt_text](../images/27.png)
+![Alt_text](../images/28.png)
+
+
+## Partie V: Sauvegarde d’un cluster kubernetes
+### Installation de Kind
+```cmd
+asdf plugin add kind
+asdf install kind latest
+asdf global kind latest
+
+kind version
+kind v0.18.0 go1.20.2 linux/amd64
+```
