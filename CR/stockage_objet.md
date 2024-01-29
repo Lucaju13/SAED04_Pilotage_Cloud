@@ -98,7 +98,33 @@ minio-user@debian:~$ mv cert.pem ~/.minio/certs/public.crt
 ![Alt_text](../images/4.png)
 ![Alt_text](../images/6.png)
 
-#### Installation et utilisation du client minio "mc"
+### Installation et utilisation du client minio "mc"
+1 - Installation 'mc'
+```cmd
+root@debian:~# wget https://dl.minio.io/client/mc/release/linux-amd64/mc
+--2024-01-29 10:58:31--  https://dl.minio.io/client/mc/release/linux-amd64/mc
+Résolution de dl.minio.io (dl.minio.io)… 178.128.69.202, 138.68.11.125
+Connexion à dl.minio.io (dl.minio.io)|178.128.69.202|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 26873856 (26M) [application/octet-stream]
+Sauvegarde en : « mc »
+
+mc                            100%[===============================================>]  25,63M  1,82MB/s    ds 37s     
+
+2024-01-29 10:59:09 (706 KB/s) — « mc » sauvegardé [26873856/26873856]
+
+root@debian:~# chmod +x mc
+root@debian:~#  mv mc /usr/local/bin
+```
+
+- Creation d'un alias:
+```cmd
+root@debian:~# mc alias set lucaju https://debian:9000 minio-user myadmin123minio --insecure
+```
+![Alt_text](../images/7.png)
+![Alt_text](../images/8.png)
+
+
 
 
 
