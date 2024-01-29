@@ -151,6 +151,20 @@ root@debian:~# mc cp -r test_rep lucaju/testbucket --insecure
 root@debian:~# mc du lucaju/testbucket/test_rep --insecure
 34MiB	1 object	testbucket/test_rep
 ```
+- les fichiers de mon bucket commençant par une lettre donnée & copie de fichier de mon bucket dans /tmp..
+```cmd
+root@debian:~# mc find lucaju/testbucket/test_rep --insecure --name "m*"
+```
+![Alt_text](../images/13.png)
 
+```cmd
+root@debian:~# mc cp -r lucaju/testbucket/ /tmp --insecure
+```
+![Alt_text](../images/14.png)
 
-
+- Suppression de mon bucket
+```cmd
+root@debian:~# mc rb --insecure lucaju/testbucket --force
+```
+![Alt_text](../images/15.png)
+![Alt_text](../images/16.png)
