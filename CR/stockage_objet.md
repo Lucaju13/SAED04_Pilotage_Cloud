@@ -94,6 +94,8 @@ minio-user@debian:~$ mv cert.pem ~/.minio/certs/public.crt
 
 ![Alt_text](../images/5.png)
 ### Partie II - Utilisation de "minio"
-- Creation de bucket "test"
+- Creation de bucket "test" ajout d'image et versionalisation:
+![Alt_text](../images/4.png)
+![Alt_text](../images/6.png)
 
 
