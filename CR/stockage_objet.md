@@ -169,5 +169,5 @@ root@debian:~# mc rb --insecure lucaju/testbucket --force
 ![Alt_text](../images/15.png)
 ![Alt_text](../images/16.png)
 
-## Python et minio
-
+## Partie III - Python et minio
+[Tuto link](https://www.stackhero.io/fr-fr/services/MinIO/documentations/Pour-commencer/Se-connecter-a-MinIO-depuis-Python)
