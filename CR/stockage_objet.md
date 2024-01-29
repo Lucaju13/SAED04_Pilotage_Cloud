@@ -192,5 +192,7 @@ pip freeze > requirements.txt
 pip install boto3
 pip freeze > requirements.txt
 ```
+![Alt_text](../images/20.png)
+
 -  Execution du script, vous pouvez trouver [ici](../scripts/upload_boto3.py)
 ![Alt_text](../images/21.png)
