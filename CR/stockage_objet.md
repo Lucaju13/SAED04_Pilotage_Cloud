@@ -196,3 +196,6 @@ pip freeze > requirements.txt
 
 -  Execution du script, vous pouvez trouver [ici](../scripts/upload_boto3.py)
 ![Alt_text](../images/21.png)
+
+## Partie IV - Utilisation de Minio comme "backend de sauvegarde"
+### Sauvegarde minio avec Kopia
