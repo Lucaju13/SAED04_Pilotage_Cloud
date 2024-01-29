@@ -39,7 +39,7 @@ nano /etc/default/minio
 GNU nano 7.2                                                                          /etc/default/minio                                                                                    
 MINIO_ACCESS_KEY=minio-user
 MINIO_SECRET_KEY=myadmin123minio
-MINIO_VOLUMES="/mnt/data"
+MINIO_VOLUMES="/data"
 ```
 - Ajout de permissions:
 ```cmd
@@ -53,4 +53,5 @@ chown minio-user:minio-user /mnt/disk1 /mnt/disk2 /mnt/disk3 /mnt/disk4
 systemctl enable minio.service
 sudo systemctl restart  minio.service
 ```
-
+- Fonctionnement:
+![Alt_text](../images/1.png)
