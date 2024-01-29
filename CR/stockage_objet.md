@@ -146,7 +146,11 @@ root@debian:~# mc cp -r test_rep lucaju/testbucket --insecure
 ```
 ![Alt_text](../images/12.png)
 
-
+- Calcul de la taille occupée par les fichiers copiés
+```cmd
+root@debian:~# mc du lucaju/testbucket/test_rep --insecure
+34MiB	1 object	testbucket/test_rep
+```
 
 
 
