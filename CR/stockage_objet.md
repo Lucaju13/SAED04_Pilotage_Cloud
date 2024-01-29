@@ -33,3 +33,7 @@ Paramétrage de minio (20240129035632.0.0) ...
 ```
 #### Configuration des Variables d'Environnement
 - Créez le fichier de configuration :
+```cmd
+nano /etc/default/minio
+```
+![Alt_text](../images/1.png)
