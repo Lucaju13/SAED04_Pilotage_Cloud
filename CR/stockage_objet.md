@@ -58,5 +58,42 @@ sudo systemctl restart  minio.service
 
 ![Alt_text](../images/2.png)
 
+![Alt_text](../images/3.png)
 #### Génération des Certificats
+J'ai rencontré des difficultés lors du login minio-user:
+```cmd
+root@debian:~# sudo su - minio-user
+su: avertissement : impossible de changer le répertoire vers /home/minio-user: Aucun fichier ou dossier de ce type
+```
+J'ai du faire:
+```cmd
+root@debian:~# mkdir /home/minio-user
+root@debian:~# chown minio-user:minio-user /home/minio-user
+root@debian:~# sudo usermod -s /bin/bash minio-user
+root@debian:~# su - minio-user
+minio-user@debian:~$ 
+```
+```cmd
+root@debian:~# su - minio-user
+minio-user@debian:~$ mkcert -key-file key.pem -cert-file cert.pem minio.lucaslocal 
+Created a new local CA 💥
+Note: the local CA is not installed in the system trust store.
+Run "mkcert -install" for certificates to be trusted automatically ⚠️
+
+Created a new certificate valid for the following names 📜
+ - "minio.lucaslocal"
+
+The certificate is at "cert.pem" and the key at "key.pem" ✅
+
+It will expire on 29 April 2026 🗓
+
+minio-user@debian:~$ mkdir -p ~/.minio/certs/
+minio-user@debian:~$ mv key.pem ~/.minio/certs/private.key
+minio-user@debian:~$ mv cert.pem ~/.minio/certs/public.crt
+```
+
+![Alt_text](../images/5.png)
+### Partie II - Utilisation de "minio"
+- Creation de bucket "test"
+
 
