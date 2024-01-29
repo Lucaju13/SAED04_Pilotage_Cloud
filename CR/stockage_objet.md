@@ -130,7 +130,7 @@ root@debian:~# mc admin info lucaju --insecure
 ```
 ![Alt_text](../images/9.png)
 
-- Création d'un bucket "testbucket & list de tousles buckets sur mon serveur Minio.
+- Création d'un bucket "testbucket & list de tous les buckets sur mon serveur Minio.
 ```cmd
 root@debian:~# mc ls lucaju --insecure
 ```
@@ -138,6 +138,12 @@ root@debian:~# mc ls lucaju --insecure
 ![Alt_text](../images/11.png)
 
 - Ajoute d'une directory et fichiers sur mon bucket.
+```cmd
+root@debian:~# mkdir test_rep
+root@debian:~# cp minio.deb test_rep/
+root@debian:~# mc cp -r test_rep lucaju/testbucket --insecure
+/root/test_rep/minio.deb:          34.03 MiB / 34.03 MiB ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.56 MiB/s 0sroot@debian:~# 
+``
 
 
 
