@@ -260,6 +260,7 @@ VELERO_FEATURES="insecure-tls" velero install --provider=aws \
 ```
 J'ai crée un fichier minio-credentials sur mon Bureau:
 ![Alt_text](../images/33.png)
+
 **Resultat**:
 ![Alt_text](../images/32.png)
 
