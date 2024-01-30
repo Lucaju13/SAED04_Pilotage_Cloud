@@ -54,11 +54,13 @@ systemctl enable minio.service
 sudo systemctl restart  minio.service
 ```
 - Fonctionnement:
+
 ![Alt_text](../images/1.png)
 
 ![Alt_text](../images/2.png)
 
 ![Alt_text](../images/3.png)
+
 #### Génération des Certificats
 J'ai rencontré des difficultés lors du login minio-user:
 ```cmd
@@ -93,9 +95,12 @@ minio-user@debian:~$ mv cert.pem ~/.minio/certs/public.crt
 ```
 
 ![Alt_text](../images/5.png)
+
 ### Partie II - Utilisation de "minio"
 - Creation de bucket "test" ajout d'image et versionalisation:
+
 ![Alt_text](../images/4.png)
+
 ![Alt_text](../images/6.png)
 
 ### Installation et utilisation du client minio "mc"
@@ -121,7 +126,9 @@ root@debian:~#  mv mc /usr/local/bin
 ```cmd
 root@debian:~# mc alias set lucaju https://debian:9000 minio-user myadmin123minio --insecure
 ```
+
 ![Alt_text](../images/7.png)
+
 ![Alt_text](../images/8.png)
 
 - Ping:
@@ -134,7 +141,9 @@ root@debian:~# mc admin info lucaju --insecure
 ```cmd
 root@debian:~# mc ls lucaju --insecure
 ```
+
 ![Alt_text](../images/10.png)
+
 ![Alt_text](../images/11.png)
 
 - Ajoute d'une directory et fichiers sur mon bucket.
@@ -155,6 +164,7 @@ root@debian:~# mc du lucaju/testbucket/test_rep --insecure
 ```cmd
 root@debian:~# mc find lucaju/testbucket/test_rep --insecure --name "m*"
 ```
+
 ![Alt_text](../images/13.png)
 
 ```cmd
@@ -167,6 +177,7 @@ root@debian:~# mc cp -r lucaju/testbucket/ /tmp --insecure
 root@debian:~# mc rb --insecure lucaju/testbucket --force
 ```
 ![Alt_text](../images/15.png)
+
 ![Alt_text](../images/16.png)
 
 ## Partie III - Python et minio
@@ -182,8 +193,11 @@ pip install minio
 pip freeze > requirements.txt
 ```
 ![Alt_text](../images/17.png)
+
 - Execution du script, vous pouvez trouver [ici](../scripts/file_uploader.py)
+
 ![Alt_text](../images/18.png)
+
 ![Alt_text](../images/19.png)
 
 ### Se connecter à MinIO avec le SDK AWS (boto)
@@ -195,6 +209,7 @@ pip freeze > requirements.txt
 ![Alt_text](../images/20.png)
 
 -  Execution du script, vous pouvez trouver [ici](../scripts/upload_boto3.py)
+
 ![Alt_text](../images/21.png)
 
 ## Partie IV - Utilisation de Minio comme "backend de sauvegarde"
@@ -218,13 +233,14 @@ sudo apt install kopia-ui
 ![Alt_text](../images/25.png)
 
 - Restore:
+  
 ![Alt_text](../images/26.png)
+
 ```cmd
 test@202-13:~$ kopia restore k2fad822dae1a9fffe33b6905b51b4956  
 ```
 
 ![Alt_text](../images/27.png)
-
 
 
 ## Partie V: Sauvegarde d’un cluster kubernetes
@@ -235,10 +251,13 @@ test@202-13:~$ kopia restore k2fad822dae1a9fffe33b6905b51b4956
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 ```
+
 ![Alt_text](../images/29.png)
+
 ```cmd
 kind create cluster
 ```
+
 ![Alt_text](../images/30.png)
 **Install Velero**:
 ```cmd
@@ -263,6 +282,7 @@ J'ai crée un fichier minio-credentials sur mon Bureau:
 ![Alt_text](../images/33.png)
 
 **Resultat**:
+
 ![Alt_text](../images/32.png)
 
 **Schedule avec velero**
