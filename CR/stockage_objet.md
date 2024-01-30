@@ -228,10 +228,43 @@ test@202-13:~$ kopia restore k2fad822dae1a9fffe33b6905b51b4956
 ## Partie V: Sauvegarde d’un cluster kubernetes
 ### Installation de Kind
 ```cmd
-asdf plugin add kind
-asdf install kind latest
-asdf global kind latest
-
-kind version
-kind v0.18.0 go1.20.2 linux/amd64
+# For AMD64 / x86_64
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
 ```
+![Alt_text](../images/29.png)
+```cmd
+kind create cluster
+```
+![Alt_text](../images/30.png)
+**Install Velero**:
+```cmd
+curl -LO https://github.com/vmware-tanzu/velero/releases/download/VERSION/velero-VERSION-linux-amd64.tar.gz
+tar zxvf velero-VERSION-linuxamd64.tar.gz
+sudo mv velero-VERSION-linux-amd64/velero /usr/local/bin/velero
+```
+![Alt_text](../images/31.png)
+
+**Backup**:
+```cmd
+VELERO_FEATURES="insecure-tls" velero install --provider=aws \
+  --plugins velero/velero-plugin-for-aws:v1.1.0 \
+  --bucket python-test-bucket \
+  --secret-file ./minio-credentials \
+  --use-volume-snapshots=false \
+  --backup-location-config region=minio,s3ForcePathStyle="true",s3Url=https://10.202.0.53:9000/
+
+```
+J'ai crée un fichier minio-credentials sur mon Bureau:
+![Alt_text](../images/33.png)
+**Resultat**:
+![Alt_text](../images/32.png)
+
+**Schedule avec velero**
+```cmd
+velero create schedule daily-backup --schedule="@daily"
+velero get schedules
+```
+![Alt_text](../images/34.png)
+
