@@ -1,2 +1,0 @@
-# T-Pot
-## Installation
