@@ -212,7 +212,9 @@ sudo apt install kopia-ui
 /usr/bin$ ./kopia-ui
 ```
 ![Alt_text](../images/23.png)
+
 ![Alt_text](../images/24.png)
+
 ![Alt_text](../images/25.png)
 
 - Restore:
