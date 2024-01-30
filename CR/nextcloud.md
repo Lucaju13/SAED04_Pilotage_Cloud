@@ -77,3 +77,17 @@ volumes:
 networks:
   nextcloud_network:
 ```
+
+![Alt_text](../images/35.png)
+
+**Config de T-pot**:
+```cmd
+git clone https://github.com/telekom-security/tpotce
+cd tpotce/iso/installer/
+./install.sh --type=user
+```
+
+![Alt_text](../images/36.png)
+
+
+
