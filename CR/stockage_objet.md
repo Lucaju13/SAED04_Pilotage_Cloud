@@ -291,4 +291,3 @@ velero create schedule daily-backup --schedule="@daily"
 velero get schedules
 ```
 ![Alt_text](../images/34.png)
-
