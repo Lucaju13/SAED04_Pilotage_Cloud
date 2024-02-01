@@ -77,6 +77,8 @@ volumes:
 networks:
   nextcloud_network:
 ```
+user: lucas
+pass: lucaju@1306
 
 ![Alt_text](../images/35.png)
 
