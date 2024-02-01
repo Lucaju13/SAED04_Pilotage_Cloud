@@ -166,3 +166,17 @@ sudo systemctl enable backup.timer
 ![Alt_text](../images/46.png)
 
 ![Alt_text](../images/47.png)
+
+### Partage de directory tpotlog sous forme d’un point de montage webdav de votre station de travail.
+**1-Installer Apache et le module dav :**
+```cmd
+sudo apt-get update
+sudo apt-get install apache2
+sudo a2enmod dav
+sudo a2enmod dav_fs
+```
+**1 - Configurer le serveur WebDAV :**
+```cmd
+sudo nano /etc/apache2/sites-available/webdav.conf
+```
+
