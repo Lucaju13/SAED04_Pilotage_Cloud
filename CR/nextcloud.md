@@ -104,4 +104,24 @@ rclone config
 
 ![Alt_text](../images/43.png)
 
+**Etape 2:**
+```bash
+#!/bin/bash
+
+# Paramètres de sauvegarde
+BACKUP_DIR="/mnt/storage/backup"
+NEXTCLOUD_DIR="http://10.202.0.115:8080"
+RCLONE_REMOTE="remote"
+
+# Commande de sauvegarde
+tar -czvf $BACKUP_DIR/backup_$(date +"%Y%m%d").tar.gz /mnt/storage/backup
+
+# Transfert vers NextCloud
+rclone copy $BACKUP_DIR/backup_$(date +"%Y%m%d").tar.gz $RCLONE_REMOTE:$NEXTCLOUD_DIR
+```
+![Alt_text](../images/45.png)
+
+![Alt_text](../images/44.png)
+
+
 
