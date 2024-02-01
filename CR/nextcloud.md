@@ -91,11 +91,7 @@ cd tpotce/iso/installer/
 
 ![Alt_text](../images/36.png)
 
-![Alt_text](../images/37.png)
 
-![Alt_text](../images/38.png)
-
-![Alt_text](../images/39.png)
 
 
 
