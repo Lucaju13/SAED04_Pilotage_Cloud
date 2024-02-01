@@ -68,8 +68,10 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 ```cmd
 docker pull gitlab/glab
 ```
+![Alt_text](../images/53.png)
 
 **2. Activation la complétion automatique pour glab.**
+
 Ajout de lignes suivantes dans mon fichier ~/.bashrc
 ```cmd
 if [ -f /usr/share/bash-completion/completions/git ]; then
