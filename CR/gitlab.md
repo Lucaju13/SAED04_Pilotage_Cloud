@@ -10,7 +10,7 @@
 
 **4. merge et rebase:**
 
-## Installation de Gitlab soit sous forme d’un container Docker, soit sur une machine virtuelle.
+## I - Installation de Gitlab soit sous forme d’un container Docker, soit sur une machine virtuelle.
 ### Installation
 [Source](https://github.com/sameersbn/docker-gitlab)
 ```cmd
@@ -60,3 +60,6 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 **Pass: Lucaju@13** 
 
 ![Alt_text](../images/51.png)
+
+## II - Utilisation de glab
+
