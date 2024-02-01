@@ -46,8 +46,9 @@ docker-compose up
 ![Alt_text](../images/49.png)
 
 J'ai du faire unblock du port 10080 sur firefox pour pouvoir acceder au Gitlab server:
-J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.security.ports.banned.override"
+J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.security.ports.banned.override" et j'ai ajouté le port 10080.
 
 ![Alt_text](../images/48.png)
 
+**Résultat:**
 ![Alt_text](../images/50.png)
