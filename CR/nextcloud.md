@@ -164,3 +164,5 @@ sudo systemctl enable backup.service
 sudo systemctl enable backup.timer
 ```
 ![Alt_text](../images/46.png)
+
+![Alt_text](../images/47.png)
