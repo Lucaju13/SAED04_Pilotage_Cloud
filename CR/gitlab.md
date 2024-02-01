@@ -59,3 +59,4 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 
 **Pass: Lucaju@13** 
 
+![Alt_text](../images/51.png)
