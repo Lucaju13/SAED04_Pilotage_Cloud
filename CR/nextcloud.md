@@ -123,5 +123,44 @@ rclone copy $BACKUP_DIR/backup_$(date +"%Y%m%d").tar.gz $RCLONE_REMOTE:$NEXTCLOU
 
 ![Alt_text](../images/44.png)
 
+### sauvegarde régulière de votre serveur TPOT sur NextCloud via un service et un timer systemd
+**1 - Créer le fichier backup.service :**
+```cmd
+sudo nano /etc/systemd/system/backup.service
+```
 
+```bash
+[Unit]
+Description=Nextcloud Backup Service
 
+[Service]
+Type=simple
+ExecStart=/home/tsec/backup_script.sh
+
+[Install]
+WantedBy=default.target
+```
+**Créer le fichier backup.timer :**
+
+```cmd
+sudo nano /etc/systemd/system/backup.timer
+```
+
+```bash
+[Unit]
+Description=Run Nextcloud Backup Service regularly
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+**3 - Activer les services et les timers :**
+```cmd
+sudo systemctl enable backup.service
+sudo systemctl enable backup.timer
+```
+![Alt_text](../images/46.png)
