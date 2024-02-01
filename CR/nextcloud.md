@@ -91,7 +91,16 @@ cd tpotce/iso/installer/
 
 ![Alt_text](../images/36.png)
 
+![Alt_text](../images/40.png)
 
+**Config backup**:
+```cmd
+rclone config
+```
+![Alt_text](../images/41.png)
 
+![Alt_text](../images/42.png)
+
+![Alt_text](../images/43.png)
 
 
