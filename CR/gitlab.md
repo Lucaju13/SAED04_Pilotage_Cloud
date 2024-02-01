@@ -62,4 +62,29 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 ![Alt_text](../images/51.png)
 
 ## II - Utilisation de glab
+####  Installation et paramétrage de glab
+**1 - Installez glab sur une machine.**
+
+```cmd
+docker pull gitlab/glab
+```
+
+**2. Activation la complétion automatique pour glab.**
+Ajout de lignes suivantes dans mon fichier ~/.bashrc
+```cmd
+if [ -f /usr/share/bash-completion/completions/git ]; then
+    . /usr/share/bash-completion/completions/git
+elif [ -f /etc/bash_completion.d/git ]; then
+    . /etc/bash_completion.d/git
+fi
+```
+ensuite j'ai redemmaré:
+```cmd
+source ~/.bashrc
+```
+
+**test:**
+![Alt_text](../images/52.png)
+
+**3. Création un token sur votre compte gitlab.**
 
