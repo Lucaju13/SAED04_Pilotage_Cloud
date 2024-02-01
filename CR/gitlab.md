@@ -52,3 +52,7 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 
 **Résultat:**
 ![Alt_text](../images/50.png)
+
+*Credentials:*
+**user:root** 
+**Pass: Lucaju@13** 
