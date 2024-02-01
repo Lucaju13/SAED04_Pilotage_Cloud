@@ -55,4 +55,6 @@ J'ai tabe sur la barre d'URL: about:config, ensuite j'ai cherché: "network.secu
 
 *Credentials:*
 **user:root** 
+
 **Pass: Lucaju@13** 
+
