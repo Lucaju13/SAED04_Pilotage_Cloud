@@ -23,5 +23,5 @@ Host registry.iutbeziers.fr
 	ForwardX11 no
 	ForwardAgent no	
 ```
-
+![Alt_text](../images/1.1.png)
 
