@@ -25,3 +25,19 @@ Host registry.iutbeziers.fr
 ```
 ![Alt_text](../images/1.1.png)
 
+# TP2
+**diiference entre fetch et pull, robas et merge**
+## Creation de branche
+
+```cmd
+test@202-13:~/Bureau/karma_analysis$ git switch -c doc/contrib_Lucas
+Basculement sur la nouvelle branche 'doc/contrib_Lucas'
+git push -u origin doc/contrib_Lucas
+```
+![Alt_text](../images/1.2.png)
+
+![Alt_text](../images/1.3.png)
+
+## Etape 2:
+
+
