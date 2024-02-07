@@ -71,5 +71,13 @@ git push -u origin doc/contrib_Lucas
 
 ## Etape 6: Utilisation de docstrings
 ![Alt_text](../images/1.17.png)
+
 ![Alt_text](../images/1.18.png)
+
+## Etape 7: Generation automatique de la documentation
+![Alt_text](../images/1.21.png)
+
+![Alt_text](../images/1.20.png)
+
+![Alt_text](../images/1.19.png)
 
