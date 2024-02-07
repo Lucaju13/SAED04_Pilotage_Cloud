@@ -69,3 +69,7 @@ git push -u origin doc/contrib_Lucas
 
 ![Alt_text](../images/1.16.png)
 
+## Etape 6: Utilisation de docstrings
+![Alt_text](../images/1.17.png)
+![Alt_text](../images/1.18.png)
+
