@@ -64,3 +64,8 @@ git push -u origin doc/contrib_Lucas
 
 ## Etape 4:
 
+## Etape 5:
+![Alt_text](../images/1.15.png)
+
+![Alt_text](../images/1.16.png)
+
