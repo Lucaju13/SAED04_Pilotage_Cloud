@@ -89,3 +89,31 @@ git push -u origin doc/contrib_Lucas
 
 ![Alt_text](../images/1.24.png)
 
+## Etape 2: Typage en Python
+```cmd
+mypy --ignore-missing-imports src/karma_analysis.py
+```
+![Alt_text](../images/1.25.png)
+
+```cmd
+ mypy --html-report type-coverage karma_analysis.py --ignore-missing-imports
+```
+![Alt_text](../images/1.26.png)
+
+![Alt_text](../images/1.27.png)
+
+```cmd
+coverage run ../src/karma_analysis.py data1
+coverage report -m
+```
+![Alt_text](../images/1.28.png)
+
+![Alt_text](../images/1.29.png)
+
+## Etape 3: Analyse de Qualité du code avec pylint et SonarQube
+```cmd
+pylint src/karma_analysis.py
+```
+![Alt_text](../images/1.30.png)
+
+
