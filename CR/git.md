@@ -81,6 +81,28 @@ git push -u origin doc/contrib_Lucas
 
 ![Alt_text](../images/1.19.png)
 
+```yaml
+#image: python:3
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - whoami
+    - pwd
+    - pip install numpy matplotlib scipy lxml sphinx sphinx-rtd-theme myst-parser --break-system-packages
+    - cd docs
+    - sphinx-build -b html source ./build/html
+    - cp -R /home/gitlab-runner/builds/GwQay9zmB/0/cloud2024/group1/karma_analysis /tmp/monbuild/
+
+  artifacts:
+    paths:
+      - docs
+  only:
+    - develop1
+```
+
 # TP3 - Evaluer et amelliorer 
 ## Etape 0:
 
@@ -116,6 +138,8 @@ pylint src/karma_analysis.py
 ```
 ![Alt_text](../images/1.30.png)
 
+![Alt_text](../images/1.31.png)
+
 ```cmd
 sonar-scanner \
   -Dsonar.projectKey=lucaju13 \
@@ -123,6 +147,4 @@ sonar-scanner \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.token=sqp_e4574ff5751606571b4e8c004ec3880093a057f1
 ```
-
-![Alt_text](../images/1.31.png)
 
