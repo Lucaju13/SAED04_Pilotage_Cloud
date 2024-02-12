@@ -141,10 +141,13 @@ pylint src/karma_analysis.py
 ![Alt_text](../images/1.31.png)
 
 ```cmd
-sonar-scanner \
+java -jar /opt/sonar-scanner/lib/sonar-scanner-cli-4.2.0.1873.jar \
   -Dsonar.projectKey=lucaju13 \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.token=sqp_e4574ff5751606571b4e8c004ec3880093a057f1
-```
+  -Dsonar.token=sqp_5e7634eae4309889b853ce8e3d9e25cf01380fb8
 
+```
+![Alt_text](../images/1.32.png)
+
+![Alt_text](../images/1.33.png)
