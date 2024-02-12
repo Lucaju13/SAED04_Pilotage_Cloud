@@ -85,5 +85,5 @@ git push -u origin doc/contrib_Lucas
 ## Etape 1:
 ![Alt_text](../images/1.23.png)
 
-![Alt_text](../images/1.14.png)
+![Alt_text](../images/1.24.png)
 
