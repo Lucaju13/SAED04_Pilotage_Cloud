@@ -81,7 +81,9 @@ git push -u origin doc/contrib_Lucas
 
 ![Alt_text](../images/1.19.png)
 
-# TP1 - Evaluer et amelliorer 
+# TP3 - Evaluer et amelliorer 
+## Etape 0:
+
 ## Etape 1:
 ![Alt_text](../images/1.23.png)
 
