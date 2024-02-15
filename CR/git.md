@@ -141,8 +141,7 @@ pylint src/karma_analysis.py
 ![Alt_text](../images/1.31.png)
 
 ```cmd
-sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6 
-
+sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6
 ```
 ![Alt_text](../images/1.33.png)
 
