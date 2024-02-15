@@ -141,13 +141,26 @@ pylint src/karma_analysis.py
 ![Alt_text](../images/1.31.png)
 
 ```cmd
-java -jar /opt/sonar-scanner/lib/sonar-scanner-cli-4.2.0.1873.jar \
-  -Dsonar.projectKey=lucaju13 \
-  -Dsonar.sources=. \
-  -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.token=sqp_5e7634eae4309889b853ce8e3d9e25cf01380fb8
+sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6 
 
 ```
+![Alt_text](../images/1.33.png)
+
 ![Alt_text](../images/1.32.png)
 
-![Alt_text](../images/1.33.png)
+**Utilisation avancée du sonarcube:**
+
+Remplacement des elements de ligne de comande en utilisant le fichier: sonar-project.properties
+
+![Alt_text](../images/1.111.png)
+
+Utilisation de ```sonar.python.coverage.reportPaths``` :
+
+![Alt_text](../images/2.2.png)
+
+![Alt_text](../images/2.1.png)
+
+
+## Etape 4:
+
+
