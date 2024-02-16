@@ -354,8 +354,16 @@ if __name__ == "__main__":
     main()
 
 ```
-**SonarQube installation et Utilisation**:
+## SonarQube installation et Utilisation:
+
+commande:
+
+```cmd
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+```
+
 ![Alt_text](../images/1.31.png)
+
 ```cmd
 sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6
 ```
