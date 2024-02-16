@@ -406,6 +406,7 @@ sonar-scanner \
 ```
 ![Alt_text](../images/4.3.png)
 
+On voit bien que coverage "Failed".
 
 *Petit changement de projet car j'ai changé de PC*
 
@@ -424,7 +425,7 @@ Wrote XML report to coverage.xml
 coverage.xml  data1.json  data2.json
 ```
 
-Dans le fichier:
+Dans le fichier de configuration que se trouve: ```cmd /opt/sonar-scanner-5.0.1.3006-linux/conf/sonar-scanner.properties ``` :
 
 ```cmd
 # Configure here general information about the environment, such as SonarQube server details
