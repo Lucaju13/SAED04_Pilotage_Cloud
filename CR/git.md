@@ -379,6 +379,15 @@ if __name__ == "__main__":
 
 **Installation de sonarCLI sur linux**:
 
+```cmd
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+sudo unzip sonar-scanner-cli-5.0.1.3006-linux.zip -d /opt
+export PATH=$PATH:/opt/sonar-scanner-cli-5.0.1.3006-linux/bin
+source ~/.bashrc
+sonar-scanner -v
+```
+
+**Installation Sonar sous docker:**
 
 commande:
 
@@ -476,5 +485,7 @@ pre-commit installed at .git/hooks/pre-commit
 
 ## Etape 0 :
 
+## Etape 1 :
 
+## Etape 2 :
 
