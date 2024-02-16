@@ -25,6 +25,19 @@ Host registry.iutbeziers.fr
 ```
 ![Alt_text](../images/1.1.png)
 
+## Problemes identifiés
+
+- Documentation lacunaire;
+- Manque de commentaires;
+- Noms de variables non explicites;
+- Utilisation d'un chemin de donnés en dur au lieu de l'argument en ligne de commande;
+- Bug dans la fonction de calcul de la probabilité;
+- Pas ou peu de tests, typage;
+- Pas de règles de codage (mix camelCase et snake_case, espaces avant et après les opérateurs, etc)
+- Pluseieurs imports sur la meme ligne et import de modules inutilisés;
+- Pas de structuration sous forme de package Python pyptoject, toml/setup.py;
+- Pas de listes des dependances (requirements.txt/pyproject.toml)
+
 # TP2
 **diiference entre fetch et pull, robas et merge**
 ## Creation de branche
@@ -451,6 +464,10 @@ pre-commit installed at .git/hooks/pre-commit
 ```
 
 ![Alt_text](../images/3.1.png)
+
+# TP4: Integration et Deployment Continuos (CI/CD)
+
+## Etape 0 :
 
 
 
