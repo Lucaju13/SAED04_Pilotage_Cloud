@@ -395,7 +395,7 @@ sonar-scanner \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.token=sqp_340945536f28534df2ee426dc44cc0b79a8e4ef2
 ```
-![Alt_text](../images/1.33.png)
+![Alt_text](../images/4.3.png)
 
 
 *Petit changement de projet car j'ai changé de PC*
