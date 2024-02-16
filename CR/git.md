@@ -86,6 +86,8 @@ git push -u origin doc/contrib_Lucas
 
 ![Alt_text](../images/1.16.png)
 
+J'ai assingé mon camarade de classe Ellie Vullo comme "reviwer"
+
 ## Etape 6: Utilisation de docstrings
 ![Alt_text](../images/1.17.png)
 
