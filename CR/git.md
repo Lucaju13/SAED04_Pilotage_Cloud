@@ -375,6 +375,8 @@ sonar-scanner \
 
 ![Alt_text](../images/1.32.png)
 
+*Petit changement de projet car j'ai changé de PC*
+
 **Utilisation avancée du sonarcube:**
 
 Remplacement des elements de ligne de comande en utilisant le fichier: sonar-project.properties
@@ -383,10 +385,33 @@ Remplacement des elements de ligne de comande en utilisant le fichier: sonar-pro
 
 Utilisation de ```sonar.python.coverage.reportPaths``` :
 
-![Alt_text](../images/2.2.png)
+Geneation du fichier xml:
 
-![Alt_text](../images/2.1.png)
+```cmd
+(env) test@203-0:~/karma_analysis/data$ coverage xml
+Wrote XML report to coverage.xml
+(env) test@203-0:~/karma_analysis/data$ ls
+coverage.xml  data1.json  data2.json
+``
+Dans le fichier:
+```cmd
+# Configure here general information about the environment, such as SonarQube server details
+# No information about the specific project should appear here
 
+# Default SonarQube server
+sonar.host.url=http://localhost:9000
+
+# Default source code encoding
+sonar.sourceEncoding=UTF-8
+
+# Project specific configuration
+sonar.projectKey=test
+sonar.sources=.
+sonar.token=sqp_340945536f28534df2ee426dc44cc0b79a8e
+
+#Utilisation de la fonction coverage
+sonar.python.coverage.reportPaths=/home/test/karma_analysis/data/coverage.xml
+```
 
 ## Etape 4:
 
