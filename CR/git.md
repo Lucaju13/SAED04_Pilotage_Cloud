@@ -356,6 +356,9 @@ if __name__ == "__main__":
 ```
 ## SonarQube installation et Utilisation:
 
+**Installation de sonarCLI sur linux**:
+
+
 commande:
 
 ```cmd
@@ -380,8 +383,6 @@ sonar-scanner \
 **Utilisation avancée du sonarcube:**
 
 Remplacement des elements de ligne de comande en utilisant le fichier: sonar-project.properties
-
-![Alt_text](../images/1.111.png)
 
 Utilisation de ```sonar.python.coverage.reportPaths``` :
 
@@ -412,6 +413,9 @@ sonar.token=sqp_340945536f28534df2ee426dc44cc0b79a8e
 #Utilisation de la fonction coverage
 sonar.python.coverage.reportPaths=/home/test/karma_analysis/data/coverage.xml
 ```
+**Coverage sur SonarQube:**
+![Alt_text](../images/2.13.png)
+
 
 ## Etape 4:
 
