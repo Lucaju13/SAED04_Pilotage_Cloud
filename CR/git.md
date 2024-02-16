@@ -125,14 +125,15 @@ deploy:
 ![Alt_text](../images/1.32.png)
 
 # TP3 - Evaluer et amelliorer 
-## Etape 0:
 
 ## Etape 1:
+
 ![Alt_text](../images/1.23.png)
 
 ![Alt_text](../images/1.24.png)
 
 ## Etape 2: Typage en Python
+
 ```cmd
 mypy --ignore-missing-imports src/karma_analysis.py
 ```
@@ -154,6 +155,7 @@ coverage report -m
 ![Alt_text](../images/1.29.png)
 
 ## Etape 3: Analyse de Qualité du code avec pylint et SonarQube
+
 ```cmd
 pylint src/karma_analysis.py
 ```
@@ -486,7 +488,253 @@ pre-commit installed at .git/hooks/pre-commit
 
 ## Etape 0 :
 
-## Etape 1 :
+Installation du runner docker :
+```cmd
+docker run -d --name gitlab-runner --restart always \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:latest
 
-## Etape 2 :
+Unable to find image 'gitlab/gitlab-runner:latest' locally
+latest: Pulling from gitlab/gitlab-runner
+8ee087424735: Pull complete 
+b5b212477f4d: Pull complete 
+26ea82d464e3: Pull complete 
+Digest: sha256:572cb10712c7c9c6f8be8b6d7ca26d2422b2b5b3afa7ed08b843a9473d002159
+Status: Downloaded newer image for gitlab/gitlab-runner:latest
+9190db8b2c89d081bf05636bc51d34385f8b622314f65bcac6b5c4e140f81672
+```
+
+conf du mon runner:
+
+```cmd
+gitlab-runner register  --url https://gitlab.iutbeziers.fr  --token glrt-M5fNm4xuzsuZyxYuLTbf
+```
+## Etape 1 :
+- Job test:
+
+```yml
+#image: python:3
+stages:
+  - test
+
+job_test:
+  stage: test
+  script:
+    - echo 'Hello World, its Lucas'
+```
+**Resultat:**
+
+![Alt_text](../images/4.2.png)
+
+**Solution 2:**
+En choisisant le conteneur en fonction d'un mot-clé spécifié: Ubuntu
+
+```yml
+stages:
+  - test
+
+variables:
+  CONTAINER_IMAGE: "ubuntu"
+
+job_test:
+  stage: test
+  script:
+    - if [ "$CONTAINER_IMAGE" == "ubuntu" ]; then
+        echo 'Using Ubuntu container';
+      elif [ "$CONTAINER_IMAGE" == "python" ]; then
+        echo 'Using Python container';
+      else
+        echo 'Using default Ubuntu container';
+      fi
+    - echo 'Hello World, its Lucas'
+```
+
+![Alt_text](../images/4.4.png)
+
+**Solution 3: 3 stages differents**
+
+```yml
+stages:
+  - afficher_date
+  - afficher_contenu_repertoire
+  - informations_systeme
+
+variables:
+  CONTAINER_IMAGE: "ubuntu:20.04"
+
+afficher_date:
+  stage: afficher_date
+  script:
+    - echo 'Affichage de la date'
+    - date
+
+afficher_contenu_repertoire:
+  stage: afficher_contenu_repertoire
+  script:
+    - echo 'Affichage du contenu du répertoire courant'
+    - ls -al
+
+informations_systeme:
+  stage: informations_systeme
+  script:
+    - echo "Informations système sur l'environnement d'exécution"
+    - uname -a
+    - |
+      if command -v lsb_release &> /dev/null; then
+        echo "lsb_release is installed."
+      else
+        if command -v apk &> /dev/null; then
+          apk update && apk add lsb-release
+        elif command -v apt-get &> /dev/null; then
+          apt-get update && apt-get install -y lsb-release
+        elif command -v yum &> /dev/null; then
+          yum install -y redhat-lsb-core
+        else
+          echo "Unsupported package manager. Please install lsb-release manually."
+        fi
+      fi
+    - lsb_release -a || true
+```
+
+
+![Alt_text](../images/4.5.png)
+
+![Alt_text](../images/4.6.png)
+
+![Alt_text](../images/4.7.png)
+
+![Alt_text](../images/4.8.png)
+
+**PS: Ce script vérifie d'abord si lsb_release est installé en utilisant command -v et tente ensuite de l'installer avec différents gestionnaires de paquets (apk, apt-get, yum). Si aucun d'entre eux n'est trouvé, il affiche un message indiquant que le gestionnaire de paquets n'est pas pris en charge, et vous devrez peut-être installer lsb-release manuellement ou ajuster le script en fonction des outils disponibles dans votre image Docker.**
+
+Lorsque je ajoute une ligne dont la commande n'est pas correcte, le pipeline s'arrete a stage 2, il n'execute pas le stage 3:
+
+*voici la ligne ajouté comme erreur dans le stage 2:*
+
+```yml
+ - commande_inexistante  # Cette ligne introduit une erreur délibérée
+```
+
+**Resultat lors d'éxecution:**
+
+![Alt_text](../images/4.9.png)
+
+**Modifs sur le yml**:
+
+```yml
+stages:
+  - afficher_date
+  - afficher_contenu_repertoire
+  - informations_systeme
+
+variables:
+  CONTAINER_IMAGE: "ubuntu:20.04"
+
+afficher_date:
+  stage: afficher_date
+  script:
+    - echo 'Affichage de la date'
+    - date
+
+afficher_contenu_repertoire:
+  stage: afficher_contenu_repertoire
+  script:
+    - echo 'Affichage du contenu du répertoire courant'
+    - commande_inexistante  # Cette ligne introduit une erreur délibérée
+    - ls -al
+  allow_failure: true  # Ajout de l'option pour permettre l'échec sans arrêter le pipeline
+
+informations_systeme:
+  stage: informations_systeme
+  script:
+    - echo "Informations système sur l'environnement d'exécution"
+    - uname -a
+    - |
+      if command -v lsb_release &> /dev/null; then
+        echo "lsb_release est installé."
+      else
+        if command -v apk &> /dev/null; then
+          apk update && apk add lsb-release
+        elif command -v apt-get &> /dev/null; then
+          apt-get update && apt-get install -y lsb-release
+        elif command -v yum &> /dev/null; then
+          yum install -y redhat-lsb-core
+        else
+          echo "Gestionnaire de paquets non pris en charge. Veuillez installer lsb-release manuellement."
+        fi
+      fi
+    - lsb_release -a || true
+```
+Avec la ligne **"allow_failure: true  # Ajout de l'option pour permettre l'échec sans arrêter le pipeline""** permet d'executer le stage 3, meme si le stage 2 ne passe pas.
+
+**Resultat:**
+
+![Alt_text](../images/4.10.png)
+
+### Rules
+En utilisant les rules, j'ai pu obtenir ça comme script: 
+```yml
+stages:
+  - afficher_date
+  - afficher_contenu_repertoire
+  - informations_systeme
+
+variables:
+  CONTAINER_IMAGE: "ubuntu:20.04"
+
+afficher_date:
+  stage: afficher_date
+  script:
+    - echo 'Affichage de la date'
+    - date
+
+afficher_contenu_repertoire:
+  stage: afficher_contenu_repertoire
+  script:
+    - echo 'Affichage du contenu du répertoire courant'
+    - ls -al
+  rules:
+    - exists:
+      - "devlucas/**/*"
+
+informations_systeme:
+  stage: informations_systeme
+  script:
+    - echo "Informations système sur l'environnement d'exécution"
+    - uname -a
+    - |
+      if command -v lsb_release &> /dev/null; then
+        echo "lsb_release est installé."
+      else
+        if command -v apk &> /dev/null; then
+          apk update && apk add lsb-release
+        elif command -v apt-get &> /dev/null; then
+          apt-get update && apt-get install -y lsb-release
+        elif command -v yum &> /dev/null; then
+          yum install -y redhat-lsb-core
+        else
+          echo "Gestionnaire de paquets non pris en charge. Veuillez installer lsb-release manuellement."
+        fi
+      fi
+    - lsb_release -a || true
+  rules:
+    - exists:
+    - changes:
+        - "*"
+    - exists:
+        - $CI_COMMIT_TAG
+```
+**J'ai crée ma propre branche devlucas, au lieu develop**
+
+**Résultat:**
+
+![Alt_text](../images/4.11.png)
+
+
+## Etape 2 : Automatisation de tests et generation de la documentation
+
+
+
+
 
