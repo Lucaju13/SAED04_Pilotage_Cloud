@@ -4,11 +4,22 @@
 
 **1. Feature "branching":**
 
+Il s'agit d'une pratique dans Git où vous créez une nouvelle branche (branch) pour travailler sur une nouvelle fonctionnalité (feature) isolément du code principal. Cela permet de développer et tester la fonctionnalité sans affecter la branche principale du projet.
+
 **2. Pull request ou merge request:**
+
+Une pull request (PR) ou une merge request (MR) est une demande faite par un contributeur à un projet pour fusionner les changements qu'il a effectués dans une branche avec la branche principale du projet. Les autres membres de l'équipe peuvent examiner les modifications, donner leur avis et, éventuellement, approuver la fusion.
 
 **3. Cherry picking:**
 
+Cette opération permet de sélectionner des commits spécifiques d'une branche et de les appliquer à une autre. Cela peut être utile lorsque vous souhaitez appliquer uniquement certains changements d'une branche à une autre, sans fusionner l'ensemble de la branche.
+
 **4. merge et rebase:**
+
+**Merge (fusionner):** C'est le processus d'intégration des modifications d'une branche dans une autre. Lorsqu'une branche est fusionnée, les modifications apportées à cette branche sont combinées avec la branche cible.
+
+**Rebase (rebaser):** C'est une autre façon d'intégrer les changements d'une branche à une autre. Plutôt que de fusionner les changements, le rebase repositionne les modifications de la branche courante au sommet de la branche cible, créant une séquence linéaire et épurée de l'historique des commits. Cela peut rendre l'historique des commits plus propre, mais il est important de l'utiliser avec prudence car il modifie l'historique existant.
+
 
 ## I - Installation de Gitlab soit sous forme d’un container Docker, soit sur une machine virtuelle.
 ### Installation
