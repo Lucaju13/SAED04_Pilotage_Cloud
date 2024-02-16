@@ -39,7 +39,7 @@ Host registry.iutbeziers.fr
 - Pas de listes des dependances (requirements.txt/pyproject.toml)
 
 # TP2
-**diiference entre fetch et pull, rebase et merge**
+**Diference entre fetch et pull, rebase et merge**
 
 Fetch et pull sont des opérations pour récupérer des modifications depuis un référentiel distant, mais fetch laisse la fusion à l'utilisateur, tandis que pull fusionne automatiquement. Rebase et merge sont des opérations de fusion, mais rebase réécrit l'historique, tandis que merge crée un commit de fusion. Le choix entre ces opérations dépend des préférences de workflow et des besoins spécifiques du projet.
 
