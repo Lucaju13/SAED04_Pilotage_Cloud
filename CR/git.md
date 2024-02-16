@@ -393,14 +393,20 @@ Geneation du fichier xml:
 Wrote XML report to coverage.xml
 (env) test@203-0:~/karma_analysis/data$ ls
 coverage.xml  data1.json  data2.json
-``
+```
+
 Dans le fichier:
+
 ```cmd
 # Configure here general information about the environment, such as SonarQube server details
 # No information about the specific project should appear here
 
 # Default SonarQube server
 sonar.host.url=http://localhost:9000
+
+sonar.login=admin
+sonar.password=root
+
 
 # Default source code encoding
 sonar.sourceEncoding=UTF-8
@@ -411,12 +417,14 @@ sonar.sources=.
 sonar.token=sqp_340945536f28534df2ee426dc44cc0b79a8e
 
 #Utilisation de la fonction coverage
-sonar.python.coverage.reportPaths=/home/test/karma_analysis/data/coverage.xml
+sonar.python.coverage.reportPaths=./data/coverage.xml
 ```
 **Coverage sur SonarQube:**
 ![Alt_text](../images/2.13.png)
 
+Tests en Quality A:
+![Alt_text](../images/1.33.png)
 
-## Etape 4:
 
+## Etape 4: Respect de normes de codage
 
