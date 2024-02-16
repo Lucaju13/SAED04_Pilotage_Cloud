@@ -422,9 +422,35 @@ sonar.python.coverage.reportPaths=./data/coverage.xml
 **Coverage sur SonarQube:**
 ![Alt_text](../images/2.13.png)
 
-Tests en Quality A:
+**Tests en Quality A:**
 ![Alt_text](../images/1.33.png)
 
 
 ## Etape 4: Respect de normes de codage
+
+**Installation pre-comit**
+```cmd
+pip install pre-commit
+```
+Mon fichier de config pre-commit, j'ai utilisé python3.9.2 car c'est la version que j'ai installé sur ma achine:
+
+```yaml
+(env) test@203-0:~/karma_analysis$ cat .pre-commit-config.yaml 
+repos:
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 23.9.1
+    hooks:
+      - id: black
+        language_version: python3.9.2
+```
+
+**Execution de la commande**:
+```cmd
+(env) test@203-0:~/karma_analysis$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+```
+
+![Alt_text](../images/3.1.png)
+
+
 
