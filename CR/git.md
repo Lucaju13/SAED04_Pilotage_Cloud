@@ -365,7 +365,11 @@ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 ![Alt_text](../images/1.31.png)
 
 ```cmd
-sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6
+sonar-scanner \
+  -Dsonar.projectKey=test \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_340945536f28534df2ee426dc44cc0b79a8e4ef2
 ```
 ![Alt_text](../images/1.33.png)
 
