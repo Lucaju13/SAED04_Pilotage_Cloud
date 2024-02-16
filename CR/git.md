@@ -120,6 +120,8 @@ deploy:
     - develop1
 ```
 
+![Alt_text](../images/1.32.png)
+
 # TP3 - Evaluer et amelliorer 
 ## Etape 0:
 
@@ -393,7 +395,6 @@ sonar-scanner \
 ```
 ![Alt_text](../images/1.33.png)
 
-![Alt_text](../images/1.32.png)
 
 *Petit changement de projet car j'ai changé de PC*
 
