@@ -259,6 +259,7 @@ kind create cluster
 ```
 
 ![Alt_text](../images/30.png)
+
 **Install Velero**:
 ```cmd
 curl -LO https://github.com/vmware-tanzu/velero/releases/download/VERSION/velero-VERSION-linux-amd64.tar.gz
