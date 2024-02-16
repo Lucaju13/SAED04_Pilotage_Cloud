@@ -138,8 +138,6 @@ pylint src/karma_analysis.py
 ```
 ![Alt_text](../images/1.30.png)
 
-![Alt_text](../images/1.31.png)
-
 Le résultat de pylint indique qu'il y a quelques problèmes de style et de convention le code.
 
 J'ai ajouté des docstrings, changé quelques noms de variables pour les rendre plus explicites, et j'ai corrigé quelques espaces en fin de ligne pour respecter les conventions PEP 8.
@@ -356,7 +354,8 @@ if __name__ == "__main__":
     main()
 
 ```
-
+**SonarQube installation et Utilisation**:
+![Alt_text](../images/1.31.png)
 ```cmd
 sonar-scanner   -Dsonar.projectKey=lucaju13   -Dsonar.sources=.   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_256dcb805e39a14f629f93f3508fd4f90c6403a6
 ```
