@@ -38,6 +38,7 @@ Host registry.iutbeziers.fr
 - Pas de structuration sous forme de package Python pyptoject, toml/setup.py;
 - Pas de listes des dependances (requirements.txt/pyproject.toml)
 
+
 # TP2
 **Diference entre fetch et pull, rebase et merge**
 
