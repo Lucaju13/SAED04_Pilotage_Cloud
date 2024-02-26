@@ -6,8 +6,11 @@
 
 ```cmd
 sudo apt-get update
-sudo apt-get install rustc cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+rustup update
 export PATH="$HOME/.cargo/bin:$PATH"
+
 ```
 
 Pour verifier l'installation du cargo: ```cargo version ```
@@ -20,7 +23,15 @@ cargo 1.65.0
 Ensuite j'ai lancé la commande:
 
 ```cmd
-cargo install nu
+cargo install nu --locked
+```
+
+```cmd
+test@202-13:~/Bureau/cloud/logs_suricata$ nu --version
+0.90.1
 ```
 
 ## Etape 1: Analyse de Logs
+
+Aprés l'installation j'ai lancé nushell via la commande: ```nu```:
+![Alt_text](../images/suri.png)
