@@ -34,4 +34,7 @@ test@202-13:~/Bureau/cloud/logs_suricata$ nu --version
 ## Etape 1: Analyse de Logs
 
 Aprés l'installation j'ai lancé nushell via la commande: ```nu```:
+
 ![Alt_text](../images/suri.png)
+
+
