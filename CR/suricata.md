@@ -47,3 +47,8 @@ curl -u NyKsYaWd7fYe4pC:iutbrtcloud2024 -H "X-Requested-With: XMLHttpRequest" -o
 ```
 ![Alt_text](../images/nu.png)
 
+J'ai récupere toutes les champs dans les "alert" pour les analiser en suite avec python.
+
+## Traitement avec Python
+
+
