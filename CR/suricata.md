@@ -1,4 +1,4 @@
-# Traitement de logs Suricata en utilisant nushell
+# Traitement de logs Suricata en utilisant nushell & Python
 
 ## Etape 0: Pré-Requis
 
@@ -42,7 +42,7 @@ Aprés l'installation j'ai lancé nushell via la commande: ```nu```:
 curl -u NyKsYaWd7fYe4pC:iutbrtcloud2024 -H "X-Requested-With: XMLHttpRequest" -o suricata-telecharge.json.gz https://registry.iutbeziers.fr:4443/public.php/webdav/suricata/log/eve.json.1.gz
 ```
 
-```nu
+```nushell
 ~/Bureau/SAE-Suricata/logs> cat eve.json.1 |jq -s '.'|from json|where event_type == "alert"|flatten|flatten|columns 
 ```
 ![Alt_text](../images/nu.png)
