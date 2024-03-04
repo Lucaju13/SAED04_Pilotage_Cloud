@@ -37,11 +37,11 @@ Aprés l'installation j'ai lancé nushell via la commande: ```nu```:
 
 ![Alt_text](../images/suri.png)
 
-```nu
-~/Bureau/SAE-Suricata/logs> cat eve.json.1 |jq -s '.'|from json|where event_type == "alert"|flatten|flatten|columns
-```
 
 ```cmd
 curl -u NyKsYaWd7fYe4pC:iutbrtcloud2024 -H "X-Requested-With: XMLHttpRequest" -o suricata-telecharge.json.gz https://registry.iutbeziers.fr:4443/public.php/webdav/suricata/log/eve.json.1.gz
 ```
 
+```nu
+~/Bureau/SAE-Suricata/logs> cat eve.json.1 |jq -s '.'|from json|where event_type == "alert"|flatten|flatten|columns 
+```
