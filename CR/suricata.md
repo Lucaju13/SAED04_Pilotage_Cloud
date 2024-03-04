@@ -45,3 +45,5 @@ curl -u NyKsYaWd7fYe4pC:iutbrtcloud2024 -H "X-Requested-With: XMLHttpRequest" -o
 ```nu
 ~/Bureau/SAE-Suricata/logs> cat eve.json.1 |jq -s '.'|from json|where event_type == "alert"|flatten|flatten|columns 
 ```
+![Alt_text](../images/nu.png)
+
