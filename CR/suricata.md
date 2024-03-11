@@ -51,4 +51,5 @@ J'ai récupere toutes les champs dans les "alert" pour les analiser en suite ave
 
 ## Traitement avec Python
 
+ALTER USER postgres WITH PASSWORD '123456';
 
